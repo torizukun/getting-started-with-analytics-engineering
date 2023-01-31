@@ -29,3 +29,6 @@ export DBT_ENV_SECRET_PG_PASSWORD=postgres
 # Documentation
 dbt docs generate
 dbt docs serve
+
+# Run on selected schema 
+dbt run -t prod
