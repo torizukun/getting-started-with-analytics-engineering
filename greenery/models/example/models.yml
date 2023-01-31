@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: user_cnt
+    description: Number of Users in our system
+    columns:
+      - name: val
+        description: Number of users
