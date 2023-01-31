@@ -1,0 +1,31 @@
+# Create Virtual ENV
+python -m venv ENV
+
+# Activate ENV
+source ENV/bin/activate
+
+# Install essential packages
+pip install -r requirements.txt
+
+# List of Current Processes (Container)
+docker ps
+
+# Check Availability of dbt project
+dbt debug
+
+# Initialize dbt project: greenery will be created
+dbt init
+> greenery
+> 1
+
+# Change DIR and check dbt project
+cd greenery/
+dbt debug
+# Copy yaml_files/profile.yml to greenery/.
+
+# Set env variable
+export DBT_ENV_SECRET_PG_PASSWORD=postgres
+
+# Documentation
+dbt docs generate
+dbt docs serve
